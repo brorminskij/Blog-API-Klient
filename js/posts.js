@@ -9,17 +9,17 @@ async function fetchAllPosts() {
         let response = await fetch('http://localhost:3000/posts/');
         let allPosts = await response.json();
         for (let post of allPosts) {
-            console.log(post);
+            console.log(post['_id']);
 
             container.innerHTML += `<h1>${post.title}</h1>`
             container.innerHTML += `<h2>${post.author}</h2>`
             let postDate = new Date(post.date);
             container.innerHTML += `<h3>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</h3>`;
-            container.innerHTML += `<h4>${post.content}</h4>`;
-            container.innerHTML +=  `<h5>${post.tags}</h5>`;
-            
+            container.innerHTML += `<p>${post.content.substring(1,100)}<a href="/post.html?id=${post['_id']}"> Read More</a></p>`;
+            container.innerHTML += `<h5>${post.tags}</h5>`;
+
         }
-    }catch (message) {
+    } catch (message) {
         throw new Error(message);
     }
 }

@@ -4,12 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
     <h1>New post</h1>
     <form id="create-post-form">
     <input id="titleInput" type="text">Title</input>
     <input id="authorInput" type="text">Author</input>
+    <br>
+    <label for="thetags">Choose your tag/tags:</label>
+
+    <select name="tags" id="tags" multiple>
+      <option value="food" id="food">Food</option>
+      <option value="economy" id="economy">Economy</option>
+      <option value="sports">Sports</option>
+      <option value="technologica">Technomusiq</option>
+    </select>
+
     <p>Content</p>
     <textarea name="" id="content-textarea" cols="30" rows="10"></textarea>
     <button>Create post</button>

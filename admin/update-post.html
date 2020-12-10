@@ -1,25 +1,31 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <h1>Update post</h1>
     <form id="create-post-form">
-    <input id="title" type="text">Title</input>
-    <input id="author" type="text">Author</input>
-    <label for="">Content</label>
-    <textarea name="content" id="content-textarea" cols="30" rows="10"></textarea>
+        <input id="title" type="text">Title</input>
+        <input id="author" type="text">Author</input>
+        <label for="">Content</label>
+        <select name="tags" id="tags" multiple>
+        <option value="food" id="food">Food</option>
+        <option value="economy" id="economy">Economy</option>
+        <option value="sports">Sports</option>
+        <option value="technologica">Technomusiq</option>
+      </select>
+        <textarea name="content" id="content-textarea" cols="30" rows="10"></textarea>
 
-
-
-    
-    <input type="submit" value="Update">
-    <a href="/admin/index.html">Back</a>
+        <input type="submit" value="Update">
+        <a href="/admin/index.html">Back</a>
     </form>
     <script src="js/update-post.js"></script>
 </body>
+
 </html>
