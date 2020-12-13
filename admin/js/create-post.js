@@ -26,7 +26,7 @@ form.addEventListener('submit', async function createPost(e) {
 
 
     try {
-            await fetch('http://localhost:3000/posts/', {
+        await fetch('http://localhost:3000/posts/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,3 +42,6 @@ form.addEventListener('submit', async function createPost(e) {
     }
 
 })
+$(document).ready(function() {
+    $('select').material_select();
+});

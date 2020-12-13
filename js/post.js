@@ -10,12 +10,13 @@ async function fetchPost() {
         let post = await response.json();
         console.log(post)
 
-        container.innerHTML += `<h1>${post.title}</h1>`
-        container.innerHTML += `<h2>${post.author}</h2>`
+        container.innerHTML += `<h5>Title: ${post.title}</h5>`
+        container.innerHTML += `<h5>Author: ${post.author}</h5>`
         let postDate = new Date(post.date);
-        container.innerHTML += `<h3>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</h3>`;
-        container.innerHTML += `<p>${post.content}</p>`;
-        container.innerHTML += `<h5>${post.tags}</h5>`;
+        container.innerHTML += `<h6>${postDate.getFullYear()}-${postDate.getMonth() + 1}-${postDate.getDate()}</h6>`;
+        container.innerHTML += `<h5>Content: ${post.content.substring(0,100)}</h5>`;
+        container.innerHTML += `<h6>Tags: ${post.tags}</h6>`;
+        container.innerHTML += `<p><a href="index.html">Back</a></p>`;
 
     } catch (message) {
         throw new Error(message)
