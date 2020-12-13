@@ -11,12 +11,14 @@ async function fetchAllPosts() {
         for (let post of allPosts) {
             console.log(post['_id']);
 
-            container.innerHTML += `<h1>${post.title}</h1>`
-            container.innerHTML += `<h2>${post.author}</h2>`
+
+            container.innerHTML += `<h5>Title: ${post.title}</h1>`
+            container.innerHTML += `<h5>Author: ${post.author}</h2>`
             let postDate = new Date(post.date);
-            container.innerHTML += `<h3>${postDate.getFullYear()}-${postDate.getMonth()}-${postDate.getDate()}</h3>`;
-            container.innerHTML += `<p>${post.content.substring(0,100)}<a href="/post.html?id=${post['_id']}"> Read More</a></p>`;
-            container.innerHTML += `<h5>${post.tags}</h5>`;
+            container.innerHTML += `<h6>${postDate.getFullYear()}-${postDate.getMonth() + 1}-${postDate.getDate()}</h6>`;
+            container.innerHTML += `<h5>Content: ${post.content.substring(0,100)}`;
+            container.innerHTML += `<a href="/post.html?id=${post['_id']}">Read More</a>`;
+            container.innerHTML += `<h6>Tags: ${post.tags}</h6>`;
 
         }
     } catch (message) {

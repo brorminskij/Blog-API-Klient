@@ -1,33 +1,68 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 
 </head>
-<body>
-    <h1>New post</h1>
-    <form id="create-post-form">
-    <input id="titleInput" type="text">Title</input>
-    <input id="authorInput" type="text">Author</input>
-    <br>
-    <label for="thetags">Choose your tag/tags:</label>
 
-    <select name="tags" id="tags" multiple>
+<body>
+    <div class="container">
+        <h1>New post</h1>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <form id="create-post-form">
+
+                    <input placeholder="title" id="titleInput" type="text" class="validate">
+                    <label for="first_name">Title</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Author" id="authorInput" type="text" class="validate">
+                <label for="first_name">Author</label>
+            </div>
+        </div>
+        <div class="input-field col s12">
+
+            <select name="tags" id="tags" multiple>
+      <option value="" disabled>Choose your option</option>
       <option value="food" id="food">Food</option>
       <option value="economy" id="economy">Economy</option>
-      <option value="sports">Sports</option>
-      <option value="technologica">Technomusiq</option>
+      <option value="sports" id="sports">Sports</option>
+      <option value="technologica" id="techno">Technomusiq</option>
     </select>
+            <label>Tags</label>
+        </div>
 
-    <p>Content</p>
-    <textarea name="" id="content-textarea" cols="30" rows="10"></textarea>
-    <button>Create post</button>
-    <a href="/admin/index.html">Back</a>
-    </form>
+        <div class="row">
 
-    <script src="js/create-post.js"></script>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="content-textarea" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Content</label>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn waves-effect waves-light" type="submit" name="action">Create post
+          <i class="material-icons right">send</i>
+        </button>
+        <a href="/admin/index.html">Back</a>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="js/create-post.js"></script>
+    </div>
 </body>
+
 </html>

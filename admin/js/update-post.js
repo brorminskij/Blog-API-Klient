@@ -25,23 +25,23 @@ async function prefillForm() {
         var economy = document.getElementById("economy")
         var sports = document.getElementById("sports")
         var techno = document.getElementById("techno")
-    
 
-        for (let tag of chosenTags){
+
+        for (let tag of chosenTags) {
             console.log(techno.value);
             console.log(tag);
-              if (tag == food.value) {
-                   food.selected = true
-               }
-                if (tag == techno.value) {
-                    techno.selected = true
-                }
-              if (tag == economy.value) {
-                   economy.selected = true
-               }
-              if (tag == sports.value) {
-                   sports.selected = true
-               }
+            if (tag == food.value) {
+                food.selected = true
+            }
+            if (tag == techno.value) {
+                techno.selected = true
+            }
+            if (tag == economy.value) {
+                economy.selected = true
+            }
+            if (tag == sports.value) {
+                sports.selected = true
+            }
         }
 
     } catch (message) {
